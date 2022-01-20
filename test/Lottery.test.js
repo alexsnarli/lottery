@@ -198,9 +198,10 @@ describe('Lottery', () => {
       await lottery.methods.withdrawFunds(accounts[1]).send({
         from: accounts[1]
       });
-      assert(false);
     } catch (err) {
       assert(err);
+      return;
     }
+    assert(false);
   });
 });
